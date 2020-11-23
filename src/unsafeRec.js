@@ -56,7 +56,7 @@ export function createNewUnsafeGlobalForBrowser() {
   // causes its global object to lose intrinsics, its eval()
   // function to evaluate code, etc.
 
-  // TODO: can we remove and garbage-collect the iframes?
+  document.body.removeChild(iframe);
 
   return unsafeGlobal;
 }
